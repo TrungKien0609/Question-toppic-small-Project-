@@ -1,0 +1,95 @@
+*,*::after,*::before{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F0F8FF;
+    min-height: 100vh;
+}
+.container{
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container > h2 {
+    font-family: 'Great Vibes', cursive;
+    margin: 15vh 0 5vh 0;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    color: #DEB887;
+    text-align: center;
+}
+.container .item{
+    width: 100%;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+}
+.container .item .header_item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .item .header_item p {
+    letter-spacing: 5px;
+}
+.container .item .header_item button i{
+    font-size: 1.5rem;
+    color: #DEB887;
+}
+.container .item .header_item button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+.container .item .header_item button:hover{
+    transform: rotate(90deg);
+}
+.container .item .item_content{
+    margin-top: 1.2rem;
+    display: none;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    color: #6495ED;
+}
+/* show_text class is created in JS file to create path for these class blow */
+
+.show_text .item_content.show_item_content{
+    display: block;
+}
+.minus_icon{
+    display: none;
+}
+.show_text .minus_icon{
+    display: inline;
+}
+.show_text .plus_icon{
+    display: none;
+}
+@media(max-width:700px){
+    html{
+        font-size: 14px;
+    }
+    .container .item .header_item p {
+        letter-spacing: 4px;
+    }
+}
+@media(max-width:400px){
+    html{
+        font-size: 12px;
+    }
+    .container .item .header_item p {
+        letter-spacing: 3px;
+    }
+}
+
